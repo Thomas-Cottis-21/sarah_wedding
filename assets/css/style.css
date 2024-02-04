@@ -1,0 +1,30 @@
+/* Most browsers have a set margin on body tag */
+body {
+    margin: 0;
+}
+
+/* =============================== HERO SECTION STYLES =============================== */
+#hero .hero-container {
+    /* setting height to 100% of the device screen height (take up the entire screen) */
+    height: 100vh;
+    /* background image styles */
+    background-image: url("/assets/images/hero/couple-test-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    /* structure */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero .hero-container .hero-content {
+    padding: 35px;
+    /* Manrope font is from google fonts */
+    font-family: "Manrope", sans-serif;
+}
+#hero .hero-container .hero-content .title {
+    font-size: 3rem;
+}
+#hero .hero-container .hero-content .subtitle {
+    font-size: 1.5rem;
+}
