@@ -1,7 +1,7 @@
 /* ======================== HERO CONTAINER ======================== */
 
 //set the target date (date and time of the wedding)
-const targetDate = new Date("2024-12-31T17:00:00").getTime();
+const targetDate = new Date("2024-05-24T17:00:00").getTime();
 
 //run every second
 const countDownInterval = setInterval(() => {
