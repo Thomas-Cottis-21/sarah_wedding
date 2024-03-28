@@ -15,14 +15,31 @@ body {
     /* structure */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 #hero .hero-container .hero-content {
     padding: 35px;
     /* Manrope font is from google fonts */
-    font-family: "Manrope", sans-serif;
+    font-family: "Dancing Script", sans-serif;
+    width: 100vw;
+}
+#hero .hero-container .hero-content .hero-title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
 }
 #hero .hero-container .hero-content .countdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     font-size: 3rem;
     padding: 1rem;
+}
+#hero .hero-container .hero-content .countdown > div {
+    display: flex;
+    flex-direction: column;
+}
+#hero .hero-container .hero-content .countdown > div span.countdown-label {
+    font-size: 1.6rem;
 }
