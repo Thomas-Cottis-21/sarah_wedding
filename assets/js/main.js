@@ -34,3 +34,4 @@ const countDownInterval = setInterval(() => {
 
 }, 1000);
 
+/* ======================== IMAGE GALLERY ======================== */
