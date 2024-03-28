@@ -24,6 +24,7 @@ body {
 }
 #hero .hero-container .hero-content .title {
     font-size: 3rem;
+    padding: 1rem;
 }
 #hero .hero-container .hero-content .subtitle {
     font-size: 1.5rem;
