@@ -1,6 +1,10 @@
 /* Most browsers have a set margin on body tag */
+/* primary = AABFA5 */
+/* secondary = 43817A */
+/* accent = D8BE89 */
 body {
     margin: 0;
+    background-color: #AABFA5;
 }
 .section-title {
     display: flex;
@@ -11,6 +15,7 @@ body {
     font-family: "Dancing Script";
     text-align: center;
     margin: 130px 0px 50px 0px;
+    color: whitesmoke;
 }
 p.content {
     font-family: "Manrope", sans-serif;
@@ -18,15 +23,16 @@ p.content {
     padding: 30px;
     box-sizing: border-box;
     text-align: center;
+    color: whitesmoke;
 }
 a {
     text-decoration: none;
     font-size: 1.5rem;
     font-family: "Manrope", sans-serif;
-    color: #ed2024;
+    color: #D8BE89;
 }
 button {
-    background-color: #ed2024;
+    background-color: #D8BE89;
     color: whitesmoke;
     font-size: 1.4rem;
     font-family: "Manrope", sans-serif;
@@ -85,6 +91,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 50px 0px;
 }
 #gallery .gallery-container {
     columns: 3;
@@ -103,6 +110,8 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #43817A;
+    color: whitesmoke;
 }
 
 #donations .donations-container {
@@ -138,11 +147,17 @@ button:hover {
 #contact .contact-container form input, #contact .contact-container form textarea {
     font-family: "Manrope", sans-serif;
     font-size: 1.4rem;
-    border: 2px solid;
+    border: 2px solid #43817A;
+    background-color: transparent;
+    color: #43817A;
     border-radius: 10px;
     width: 100%;
     padding: 5px;
     margin: 10px;
+    outline: none;;
+}
+#contact textarea::placeholder, #contact input::placeholder {
+    color: #43817A;
 }
 #contact textarea {
     height: 30vh;
