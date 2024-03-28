@@ -10,8 +10,20 @@ body {
     font-size: 4rem;
     font-family: "Dancing Script";
     text-align: center;
-    margin: 30px;
-    width: 100%;
+    margin: 130px 0px;
+}
+p.content {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.3rem;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Manrope", sans-serif;
+    color: #ed2024;
 }
 
 /* =============================== HERO SECTION STYLES =============================== */
@@ -70,4 +82,23 @@ body {
     width: 100%;
     display: block;
     margin: 0px 0px 10px 0px;
+}
+
+/* =============================== DONATIONS SECTION STYLES =============================== */
+
+#donations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#donations .donations-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#donations .donations-container img {
+    width: 30%;
 }
