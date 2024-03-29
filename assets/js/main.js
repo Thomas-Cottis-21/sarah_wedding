@@ -1,7 +1,7 @@
 /* ======================== HERO CONTAINER ======================== */
 
 //set the target date (date and time of the wedding)
-const targetDate = new Date("2024-05-24T17:00:00").getTime();
+const targetDate = new Date("2024-05-24T18:00:00").getTime();
 
 //run every second
 const countDownInterval = setInterval(() => {
@@ -40,8 +40,6 @@ const contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-
-    //disable button
 
     //get form values
     const name = document.getElementById("name").value;
@@ -119,6 +117,11 @@ const renderErrors = (errors) => {
 }
 
 const sendData = (userData) => {
+
+    const button = document.getElementById("send-button");
+    button.disabled = true;
+    button.textContent = "Sending Message...";
+
     const url = "../../form/form-handler.php";
 
     const requestOptions = {
@@ -159,9 +162,17 @@ const handleSuccess = () => {
 
     successModal.show();
     form.reset();
+
+    const button = document.getElementById("send-button");
+	button.disabled = false;
+	button.textContent = "Send!";
 }
 
 const handleError = () => {
     const errorModal = new bootstrap.Modal(document.getElementById("error-modal"));
     errorModal.show();
+
+    const button = document.getElementById("send-button");
+    button.disabled = false;
+    button.textContent = "Send!";
 }

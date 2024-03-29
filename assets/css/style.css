@@ -19,7 +19,7 @@ body {
 }
 p.content {
     font-family: "Manrope", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     padding: 30px;
     box-sizing: border-box;
     text-align: center;
@@ -39,6 +39,7 @@ button {
     border: none;
     border-radius: 5px;
     padding: 8px 20px;
+    outline: none;
 }
 button:hover {
     cursor: pointer;
@@ -67,7 +68,7 @@ button:hover {
     align-items: start;
 }
 #hero .hero-container .hero-content {
-    padding: 35px;
+    padding: 0px;
     /* Manrope font is from google fonts */
     font-family: "Dancing Script", sans-serif;
     width: 100%;
@@ -90,11 +91,15 @@ button:hover {
 #hero .hero-container .hero-content .countdown > div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 #hero .hero-container .hero-content .countdown > div span.countdown-label {
     font-size: 1.6rem;
 }
 @media(min-width: 768px) {
+    #hero .hero-container .hero-content {
+        padding: 35px;
+    }
     #hero .hero-container .hero-content .countdown {
         justify-content: space-evenly;
     }
@@ -149,6 +154,7 @@ button:hover {
 }
 #donations .donations-container img {
     width: 60%;
+    max-width: 400px;
 }
 @media (min-width: 768px) {
     #donations .donations-container img {
