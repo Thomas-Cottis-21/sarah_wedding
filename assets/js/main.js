@@ -41,6 +41,8 @@ const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    //disable button
+
     //get form values
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -136,9 +138,30 @@ const sendData = (userData) => {
             return response.json();
         })
         .then(data => {
-            console.log(data);
+            if (data == true) {
+                //handle success
+                handleSuccess();
+            } else {
+                //handle error
+                handleError();
+            }
         })
         .catch(error => {
-            console.error("There was a problem with the request: ", error);
+            console.log("There was a problem with the request: ", error);
+            handleError();
         })
+}
+
+const handleSuccess = () => {
+    const form = document.getElementById("contact-form");
+
+    const successModal = new bootstrap.Modal(document.getElementById("success-modal"));
+
+    successModal.show();
+    form.reset();
+}
+
+const handleError = () => {
+    const errorModal = new bootstrap.Modal(document.getElementById("error-modal"));
+    errorModal.show();
 }

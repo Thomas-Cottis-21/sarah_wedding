@@ -4,6 +4,7 @@ require_once "/home2/homasan5/PHPMailer/SMTP.php";
 require_once "/home2/homasan5/PHPMailer/Exception.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 class EmailHandler {
 
@@ -42,7 +43,13 @@ class EmailHandler {
         $mail->Subject = "New Message From $name: $subject";
         $mail->Body = $message;
 
-        $mail->send();
+        try {
+            $mail->send();
+            return true;
+        } catch(Exception $e) {
+            return $e;
+        }
+        
     }
 
 }
