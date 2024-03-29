@@ -70,7 +70,7 @@ button:hover {
     padding: 35px;
     /* Manrope font is from google fonts */
     font-family: "Dancing Script", sans-serif;
-    width: 100vw;
+    width: 100%;
 }
 #hero .hero-container .hero-content .hero-title {
     width: 100%;
@@ -81,9 +81,11 @@ button:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: 3rem;
     padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 #hero .hero-container .hero-content .countdown > div {
     display: flex;
@@ -91,6 +93,11 @@ button:hover {
 }
 #hero .hero-container .hero-content .countdown > div span.countdown-label {
     font-size: 1.6rem;
+}
+@media(min-width: 768px) {
+    #hero .hero-container .hero-content .countdown {
+        justify-content: space-evenly;
+    }
 }
 /* =============================== IMAGE GALLERY SECTION STYLES =============================== */
 
