@@ -2,7 +2,8 @@
 /* ===== THIS RUNS ON THE SERVER ===== */
 
 //import the validation class
-require_once "validate.class.php";
+require_once "./classes/validate.class.php";
+require_once "./classes/emailHandler.class.php";
 
 //retrieve data
 $postData = file_get_contents("php://input");
@@ -26,5 +27,8 @@ $subject = $data->subject;
 $message = $data->message;
 
 //send emails
+$EmailHandler = new EmailHandler();
+$EmailHandler->sendTestEmail();
+
 $response = true;
 echo json_encode($response);
