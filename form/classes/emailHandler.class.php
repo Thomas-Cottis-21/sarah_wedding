@@ -1,6 +1,4 @@
 <?php
-require_once "../../credentials/credentials.php";
-
 require_once "/home2/homasan5/PHPMailer/PHPMailer.php";
 require_once "/home2/homasan5/PHPMailer/SMTP.php";
 require_once "/home2/homasan5/PHPMailer/Exception.php";
@@ -10,13 +8,12 @@ use PHPMailer\PHPMailer\PHPMailer;
 class EmailHandler {
 
     public function sendTestEmail() {
-        global $CREDENTIALS;
         $mail = new PHPMailer(true);
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = $CREDENTIALS->EMAIL;
-        $mail->Password = $CREDENTIALS->PASSWORD;
+        $mail->Username = "tomcottis21@gmail.com";
+        $mail->Password = "rvnndshrfexknykn";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
@@ -25,6 +22,25 @@ class EmailHandler {
         $mail->Subject = "Test";
         $mail->isHTML(false);
         $mail->Body = "This is a test";
+
+        $mail->send();
+    }
+
+    public function sendFormEmail($name, $email, $subject, $message) {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = "smtp.gmail.com";
+        $mail->SMTPAuth = true;
+        $mail->Username = "tomcottis21@gmail.com";
+        $mail->Password = "rvnndshrfexknykn";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port = 465;
+
+        $mail->setFrom("tomcottis21@gmail.com", "Sarah + Josh Site");
+        $mail->addAddress($email);
+        $mail->isHTML(false);
+        $mail->Subject = "New Message From $name: $subject";
+        $mail->Body = $message;
 
         $mail->send();
     }

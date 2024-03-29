@@ -28,7 +28,7 @@ $message = $data->message;
 
 //send emails
 $EmailHandler = new EmailHandler();
-$EmailHandler->sendTestEmail();
+$EmailHandler->sendFormEmail($name, $email, $subject, $message);
 
 $response = true;
 echo json_encode($response);
