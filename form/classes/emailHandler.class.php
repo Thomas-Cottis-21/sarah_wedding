@@ -37,11 +37,13 @@ class EmailHandler {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
-        $mail->setFrom("tomcottis21@gmail.com", "Sarah + Josh Site");
-        $mail->addAddress($email);
+        $mail->setFrom($email, "Sarah + Josh Site");
+        $mail->addAddress('tomcottis21@gmail.com');
+        $mail->addAddress('sarahcottis21@gmail.com');
+        $mail->addAddress('Joshdnelson2@gmail.com');
         $mail->isHTML(false);
         $mail->Subject = "New Message From $name: $subject";
-        $mail->Body = $message;
+        $mail->Body = "$message \nReply back to $email";
 
         try {
             $mail->send();
