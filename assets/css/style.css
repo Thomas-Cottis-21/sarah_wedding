@@ -199,6 +199,21 @@ button:hover {
 #contact textarea {
     height: 30vh;
 }
+#contact .errors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ed2024;
+    color: whitesmoke;
+    font-family: "Manrope", sans-serif;
+    font-size: 1.5rem;
+    margin: 10px;
+    border-radius: 10px;
+}
+#contact .errors span {
+    padding: 10px 15px;
+}
 
 @media (min-width: 768px) {
     #contact .contact-container form {
